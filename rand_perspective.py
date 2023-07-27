@@ -1,6 +1,7 @@
 import torch
 import torchvision.transforms.functional as F
 from torchvision.transforms import InterpolationMode
+import torchvision.transforms as transforms
 from torch import Tensor
 from PIL import Image
 
@@ -163,7 +164,7 @@ class RandomPerspectiveAboutCenter(torch.nn.Module):
 # Example usage:
 input_image = Image.open("path_to_image")
 distort = transforms.Compose([
-    transforms.RandomPerspectiveAboutCenter()
+    RandomPerspectiveAboutCenter()
 ])
 output_image = distort(input_image)
 output_image.show()
